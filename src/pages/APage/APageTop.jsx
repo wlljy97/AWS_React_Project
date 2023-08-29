@@ -4,6 +4,7 @@ import MainLayout from '../../components/MainLayout/MainLayout';
 import { css } from "@emotion/react";
 import { MdOutlineLocationSearching } from "react-icons/md";
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const SMiddle = css`
     /* background-color: #eee; */
@@ -119,11 +120,15 @@ const SLocBtn = css`
 
 
 function APageTop(props) {
-    const [ selectedButton, setSelectedButton ] = useState('')
+    const navigate = useNavigate(); // useNavigate 훅을 이용해 네비게이션 함수를 가져옵니다.
+    const location = useLocation(); // 현재 경로를 가져옴
+    const [ selectedButton, setSelectedButton ] = useState('all')
 
     const handleButtonClick = (buttontype) => {
         setSelectedButton(buttontype);
     };
+
+    
 
     return (
     <div css={SMiddle}>
