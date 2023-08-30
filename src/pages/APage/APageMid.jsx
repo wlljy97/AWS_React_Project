@@ -75,11 +75,14 @@ function APageMid(props) {
     const scrollableWrapperRef = useRef(null); // 스크롤 가능한 래퍼에 대한 참조
 
     const handleButtonClick = (buttontype) => {
+        // 버튼 클릭시 버튼 색깔 바꾸기
         if (selectedButton === buttontype) {
             setSelectedButton('');
         } else {
             setSelectedButton(buttontype);
-        }
+        } 
+        
+        // 버튼을 가운데로 옮기기
         if (scrollableWrapperRef.current) {
             const buttonIndex = Array.from(scrollableWrapperRef.current.children).findIndex(
                 (child) => child.textContent === buttontype
