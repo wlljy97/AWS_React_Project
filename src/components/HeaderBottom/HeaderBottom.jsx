@@ -3,6 +3,7 @@ import React from 'react';
 import { css } from "@emotion/react";
 import { Link, useLocation } from 'react-router-dom';
 
+
 const SHeaderBottom = css`
     display: block;
     letter-spacing: -1px;
@@ -50,6 +51,8 @@ const SFeed = (pathname) => css`
     font-weight: ${pathname === '/feed' ? '900' : '400'};
     color: ${pathname === '/feed' ? '#ffffff' : 'rgba(255, 255, 255, 0.7)'};
 `;
+
+
 
 const SVisit = (pathname) => css`
     position: relative; 
@@ -147,12 +150,14 @@ const SStorage = (pathname) => css`
 function HeaderBottom(props) {
     const location = useLocation();
 
+    const isFeedActive = location.pathname.includes('/feed') || location.pathname.includes('/feed-follow');
+
     return (
     <div css={SHeaderBottom}>
         
         <div css={SPid}>
 
-            <Link css={SFeed(location.pathname)} to={ "/feed" }>피드</Link>
+        <Link css={SFeed(isFeedActive ? location.pathname : '')} to="/feed">피드</Link>
             
             <Link css={SVisit(location.pathname)} to={ "/visit" }>타임라인</Link>
 
@@ -169,3 +174,4 @@ function HeaderBottom(props) {
 }
 
 export default HeaderBottom;
+

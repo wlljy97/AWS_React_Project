@@ -116,12 +116,12 @@ const SLocBtn = css`
 `;
 
 
-function APageTop(props) {
+function FollowPageTop(props) {
     const navigate = useNavigate(); // useNavigate 훅을 이용해 네비게이션 함수를 가져옵니다.
     
     
     const location = useLocation(); // 현재 경로를 가져옴
-    const [ selectedButton, setSelectedButton ] = useState('all')
+    const [ selectedButton, setSelectedButton ] = useState('following')
 
     const handleButtonClick = (buttontype) => {
         setSelectedButton(buttontype);
@@ -178,4 +178,4 @@ function APageTop(props) {
     );
 }
 
-export default APageTop;
+export default FollowPageTop;

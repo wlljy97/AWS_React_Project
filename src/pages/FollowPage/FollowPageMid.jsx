@@ -69,7 +69,7 @@ const STableChangeBtn = css`
 
 
 
-function APageMid(props) {
+function FollowPageMid(props) {
     const [ selectedButton, setSelectedButton ] = useState('');
     const [showScrollButtons, setShowScrollButtons] = useState(false); // 스크롤 버튼 가시성 상태
     const scrollableWrapperRef = useRef(null); // 스크롤 가능한 래퍼에 대한 참조
@@ -96,8 +96,7 @@ function APageMid(props) {
                 left: scrollTo,
                 behavior: 'smooth'
             });
-        
-        
+            
         }
     };
 
@@ -262,4 +261,4 @@ function APageMid(props) {
     );
 }
 
-export default APageMid;
+export default FollowPageMid;

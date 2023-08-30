@@ -4,15 +4,14 @@ import { css } from "@emotion/react";
 import { PiDotsThreeVerticalBold, PiSmileyLight, PiStarLight } from "react-icons/pi";
 import { GiPositionMarker } from "react-icons/gi";
 import { MdKeyboardArrowRight } from "react-icons/md"
-import userImg from "../../assets/images.jpg"
-import user2Img from "../../assets/profile.jpg"
-import cof from "../../assets/cof.jpg"
-import spge from "../../assets/spge.jpeg"
-import coffee from "../../assets/coffee.png"
+import chaa from "../../assets/chaa.jpg"
+import gagu1 from "../../assets/gagu1.jpeg"
+import gagu2 from "../../assets/gagu2.jpeg"
+import coffee from "../../assets/prpr.png"
 import heart from "../../assets/heart.png"
-import view from "../../assets/view.png"
-import ggal from "../../assets/ggal.png"
-import umi from "../../assets/umi.png"
+import view from "../../assets/trtr.png"
+
+
 
 
 const SList = css`
@@ -86,12 +85,16 @@ const SUserImg = css`
     width: 42px;
     height: 42px;
 `
+const SPhoImg = css`
+    display: flex;
 
+`;
 
 const SBackImg = css`
+    display: flex;
     border-radius: 8px;
     position: relative;
-    width: 600px;
+    width: 330px;
     height: 400px;
     top: 0;
     right: 0;
@@ -370,7 +373,6 @@ const SPlaceLocal = css`
     margin-top: 4px;
     font-size: 13px;
     color: #8f8f8f;
-    /* line-height: 1.6rem; */
 `
 
 const SPlaceright = css`
@@ -407,21 +409,23 @@ const SBtnIcon = css`
     display: inline-block;
     vertical-align: top;
     color: #b8b8b8;
-`
+`;
 
-function APageBtm(props) {
+
+
+function FollowPageBtm(props) {
     return (
         <ul css={SList}>
             <li>
                 <div css={SBack}>
                     <div css={SUserBox}>
                             <button css={SUserBtn}>
-                                <div css={SUserIcon}> <img css={SUserImg} src={userImg} alt="" /></div>
+                                <div css={SUserIcon}> <img css={SUserImg} src={chaa} alt="" /></div>
                                 <div css={SId}>
-                                    <div css={SUsername}>코피환자</div>
+                                    <div css={SUsername}>가구맨</div>
                                     <div css={SPhotoFollowBox}>
-                                        <span css={SPhotoFollow}>사진리뷰 2 </span> ·
-                                        <span css={SPhotoFollow}>팔로워 0</span>
+                                        <span css={SPhotoFollow}>사진리뷰 9 </span> ·
+                                        <span css={SPhotoFollow}>팔로워 3</span>
                                     </div>
                                 </div>
                             </button>
@@ -434,12 +438,15 @@ function APageBtm(props) {
                             
                         </div>
                     <div >
-                        <img css={SBackImg} src={cof} />
+                        <div css={SPhoImg}>
+                            <img css={SBackImg} src={gagu1} />
+                            <img css={SBackImg} src={gagu2} />
+                        </div>
 
                         <div css={SLocal}>
                             <div css={SLocalBar}>
                                 <div css={SLocalIcon}><GiPositionMarker/></div>
-                                <span css={SLocalName}> 카페거리 어딘가</span>
+                                <span css={SLocalName}>어딘가의 가구점</span>
                             </div>
                         </div>
                     </div>
@@ -447,19 +454,16 @@ function APageBtm(props) {
                     <button css={SAdditionalBox}>
                         <div css={SSAdditional}>
                             <div>
-                                아아 좋아써!!!
+                                직원분들이 친절하고 다양한 가구들이 많이 있어요!!😊
                             </div>               
                         </div>
                     </button>
 
                     <div css={STagBox}>
-                        <span css={STagBar}>
-                            <img css={STagIcon} src={coffee}/> 
-                            커피 맛이 좋아써!!!!
-                        </span>
+                        <span css={STagBar}><img css={STagIcon} src={coffee}/>상품이 다양해요</span>
                         <span css={STagBar}><img css={STagIcon} src={heart}/>친절해요</span>
-                        <span css={STagBar}><img css={STagIcon} src={view}/>뷰가 좋아요</span>
-                        <span css={STagBar}> +3 </span>
+                        <span css={STagBar}><img css={STagIcon} src={view}/>트렌디해요</span>
+                        <span css={STagBar}> +5 </span>
                     </div>
 
                     <div css={SReactionBar}>
@@ -469,7 +473,7 @@ function APageBtm(props) {
                             </button>
                         </div>
                         <div css={SDate}>
-                            8.11 금 방문
+                            7.30 금 방문
                         </div>
                     </div>
 
@@ -477,7 +481,7 @@ function APageBtm(props) {
                             <div css={SPlace}>
                                 <div css={SPlaceleft}>
                                     <div css={SPlaceName}>
-                                        <button css={SPlaceNameBtn}>카페가 좋으디 <MdKeyboardArrowRight/></button>
+                                        <button css={SPlaceNameBtn}>가구는 가구다 <MdKeyboardArrowRight/></button>
                                     </div>
                                     <div css={SPlaceLocal}>이 세상 어딘가</div>
                                 </div>
@@ -492,91 +496,10 @@ function APageBtm(props) {
                 </div>
 
             </li>
-            <li>
-            <div css={SBack}>
-                    <div css={SUserBox}>
-                            <button css={SUserBtn}>
-                                <div css={SUserIcon}> <img css={SUserImg} src={user2Img} alt="" /></div>
-                                <div css={SId}>
-                                    <div css={SUsername}>아나볼릭</div>
-                                    <div css={SPhotoFollowBox}>
-                                        <span css={SPhotoFollow}>사진리뷰 8 </span> ·
-                                        <span css={SPhotoFollow}>팔로워 0</span>
-                                    </div>
-                                </div>
-                            </button>
-
-                            <button css={SFollowBtn}>팔로우</button>
-
-                            <div css={SVerticalBox}>
-                                <button css={SVertical}><PiDotsThreeVerticalBold/></button>
-                            </div>
-                            
-                        </div>
-                    <div >
-                        <img css={SBackImg2} src={spge} />
-
-                        <div css={SLocal}>
-                            <div css={SLocalBar}>
-                                <div css={SLocalIcon}><GiPositionMarker/></div>
-                                <span css={SLocalName}> 이 세상 파스타</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button css={SAdditionalBox}>
-                        <div css={SSAdditional}>
-                            <div>
-                                파스타가 매우 야무집니다.!!
-                            </div>               
-                        </div>
-                    </button>
-
-                    <div css={STagBox}>
-                        <span css={STagBar}>
-                            <img css={STagIcon} src={ggal}/> 
-                            매장이 청결해요
-                        </span>
-                        <span css={STagBar}>
-                            <img css={STagIcon} src={umi}/> 
-                            음식이 맛있어요
-                        </span>
-                        <span css={STagBar}> +5 </span>
-                    </div>
-
-                    <div css={SReactionBar}>
-                        <div css={SReactionBarInner}>
-                            <button css={SReactionBtn}>
-                                <PiSmileyLight css={SReactionIcon}/> 반응 남기기
-                            </button>
-                        </div>
-                        <div css={SDate}>
-                            8.05 토 방문
-                        </div>
-                    </div>
-
-                        <div css={SPlaceBox}>
-                            <div css={SPlace}>
-                                <div css={SPlaceleft}>
-                                    <div css={SPlaceName}>
-                                        <button css={SPlaceNameBtn}>팟스타 쥬아써!! <MdKeyboardArrowRight/></button>
-                                    </div>
-                                    <div css={SPlaceLocal}>어딘가의 파스타</div>
-                                </div>
-                                <div css={SPlaceright}>
-                                    <button css={SSaveBtn}>
-                                        <PiStarLight css={SBtnIcon}/>
-                                        <span css={SBtnName}>저장</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-
-            </li>
+            
 
         </ul>
     );
 }
 
-export default APageBtm;
+export default FollowPageBtm;

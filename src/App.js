@@ -12,6 +12,7 @@ import Cpage from "./pages/CPage/Cpage";
 import DPage from "./pages/DPage/DPage";
 import EPage from "./pages/EPage/EPage";
 import HeaderFooter from "./components/HeaderFooter/HeaderFooter";
+import FollowPage from "./pages/FollowPage/FollowPage";
 
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
           <Route path="/review" element={ <Cpage />} />
           <Route path="/reservation" element={ <DPage />} />
           <Route path="/storage" element={ <EPage />} />
+          <Route path="/feed" element={<APage />} />
+          <Route path="/feed-follow" element={< FollowPage />} />
+
         </Routes>
 
           <HeaderFooter/>
